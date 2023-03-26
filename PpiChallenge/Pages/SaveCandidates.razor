@@ -1,7 +1,9 @@
 ﻿@page "/"
 @using Blazored.FluentValidation;
+@inject IJSRuntime js
+@inject SweetAlertService Swal
 
-<EditForm model ="@candidateModel">
+<EditForm model ="@candidateModel" OnSubmit="OnSubmit">
     <FluentValidationValidator @ref="_fluentValidationValidator" Validator="Validator" />
 
     <div class="container container-fluid">
