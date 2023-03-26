@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33516.290
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PpiChallenge", "PpiChallenge\PpiChallenge.csproj", "{8685A195-C61B-4BD2-BE6A-473E73FCF144}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "Models\Models.csproj", "{ADE2D743-4A4D-4B03-97D5-24A12D514020}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8685A195-C61B-4BD2-BE6A-473E73FCF144}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8685A195-C61B-4BD2-BE6A-473E73FCF144}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8685A195-C61B-4BD2-BE6A-473E73FCF144}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8685A195-C61B-4BD2-BE6A-473E73FCF144}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADE2D743-4A4D-4B03-97D5-24A12D514020}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADE2D743-4A4D-4B03-97D5-24A12D514020}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADE2D743-4A4D-4B03-97D5-24A12D514020}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADE2D743-4A4D-4B03-97D5-24A12D514020}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {312EE867-76C4-45E7-9B6D-D57CA60950B6}
+	EndGlobalSection
+EndGlobal

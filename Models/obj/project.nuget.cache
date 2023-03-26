@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "3DjwTQRgjsPDqSsZ6vIRhEk15b42/3+hSZbgJBCxdKrzIkOSAq5sMaplgkzlbCOSd3xgcKBiDt34dMmHnpdP8Q==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\velozient\\source\\repos\\PpiChallenge\\Models\\Models.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\velozient\\.nuget\\packages\\fluentvalidation\\11.5.1\\fluentvalidation.11.5.1.nupkg.sha512"
+  ],
+  "logs": []
+}
