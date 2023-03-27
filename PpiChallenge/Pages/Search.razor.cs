@@ -9,6 +9,7 @@ namespace PpiChallenge.Pages
     public partial class Search
     {
         [Inject] AppState State { get; set; } = new();
+        [Inject] NavigationManager? NavigationManager { get; set; }
         private IQueryable<CandidateModel>? Candidates { get; set; }
 
         private IQueryable<CandidateModel>? SearchResults { get; set; }
@@ -27,6 +28,8 @@ namespace PpiChallenge.Pages
 
         private void ApplyFilters()
         {
+            SearchResults = State.Candidates.AsQueryable();
+
             foreach (PropertyInfo prop in SearchFilters.GetType().GetProperties())
             {
                 var type = Nullable.GetUnderlyingType(prop.PropertyType) ?? prop.PropertyType;
@@ -70,6 +73,10 @@ namespace PpiChallenge.Pages
             SearchResults = State.Candidates.AsQueryable();
         }
 
+        private void NavigateToCreate()
+        {
+            NavigationManager?.NavigateTo("SaveCandidate");
+        }
 
     }
 }

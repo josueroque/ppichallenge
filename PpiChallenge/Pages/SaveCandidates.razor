@@ -1,4 +1,4 @@
-﻿@page "/candidate"
+﻿@page "/SaveCandidate"
 @using Blazored.FluentValidation;
 @inject IJSRuntime js
 @inject SweetAlertService Swal
@@ -22,14 +22,17 @@
             <div class="mt-3 col-6">
                 <label>Email Address</label>
                 <InputText @bind-Value="candidateModel.EmailAdress" class="form-control"></InputText>
+                <ValidationMessage For="@(() => candidateModel.EmailAdress)" />
             </div>
             <div class="mt-3 col-6">
                 <label>Phone Number</label>
                 <InputText @bind-Value="candidateModel.PhoneNumber" class="form-control"></InputText>
+                <ValidationMessage For="@(() => candidateModel.PhoneNumber)" />
             </div>
             <div class="mt-3 col-6">
-                <label>Residencial Zip Code</label>
+                <label>Residential Zip Code</label>
                 <InputText @bind-Value="candidateModel.ZipCode" class="form-control"></InputText>
+                <ValidationMessage For="@(() => candidateModel.ZipCode)" />
             </div>
         </div>
 

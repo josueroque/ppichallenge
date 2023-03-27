@@ -1,4 +1,5 @@
 ﻿@page "/"
+@using PpiChallenge.Extensions;
 @inject IJSRuntime js
 @inject SweetAlertService Swal
 
@@ -34,16 +35,22 @@
                 <button @onclick="ClearSearch" class="btn w-25 btn-primary search-button mx-2">
                      Clear
                 </button>
+                <button @onclick="NavigateToCreate" class="btn w-25 btn-primary search-button mx-2">
+                    Add New
+                </button>
             </div>
     </div>
 
         <div class="col-auto mt-4">
+            <div class="mx-auto w-50 mt-3 mb-3 text-center">
+                <h4>Candidates</h4>
+            </div>
         <div class="grid">
             <QuickGrid Items="@SearchResults">
                 <PropertyColumn Title="First Name" Property="@(c => c.FirstName)" Sortable="true" />
                 <PropertyColumn Title="Last Name" Property="@(c => c.LastName)" Sortable="true" Align="Align.Right" />
                 <PropertyColumn Title="Email Adress" Property="@(c => c.EmailAdress)" Sortable="true" Align="Align.Right" />
-                <PropertyColumn Title="Phone Number"  Property="@(c => c.PhoneNumber)" Sortable="true" Align="Align.Right" />
+                <PropertyColumn Title="Phone Number"  Property="@(c => c.PhoneNumber.FormatPhoneNumber())" Sortable="true" Align="Align.Right" />
                 <PropertyColumn Title="Zip Code" Property="@(c => c.ZipCode)" Sortable="true" Align="Align.Right" />
             </QuickGrid>
         </div>

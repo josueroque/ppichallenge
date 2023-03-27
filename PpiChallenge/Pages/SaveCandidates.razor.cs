@@ -12,6 +12,7 @@ namespace PpiChallenge.Pages
     {
         [Inject] public IValidator<CandidateModel>? Validator { get; set; }
         [Inject] AppState State { get; set; } = new();
+        [Inject] NavigationManager? NavigationManager { get; set; }
         private FluentValidationValidator? _fluentValidationValidator;
         private CandidateModel candidateModel { get; set; } = new();
 
@@ -38,6 +39,7 @@ namespace PpiChallenge.Pages
                     Icon = SweetAlertIcon.Success
                 });
 
+                NavigationManager?.NavigateTo("/");
 
             }
             catch

@@ -11,8 +11,13 @@ namespace Models
 
         [Display(Name = "Last Name")]
         public string LastName { get; set; } = string.Empty;
-        public string? EmailAdress { get; set; }
-        public string? PhoneNumber { get; set; }
-        public string? ZipCode { get; set; }
+
+        [Display(Name = "Email Adress")]
+        public string EmailAdress { get; set; } = string.Empty;
+
+        [Display(Name = "Phone Number")]
+        public string PhoneNumber { get; set; } = string.Empty;
+        [Display(Name = "Residential Zip Code")]
+        public string ZipCode { get; set; } = string.Empty;
     }
 }
