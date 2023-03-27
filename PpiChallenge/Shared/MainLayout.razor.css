@@ -79,3 +79,26 @@ main {
         padding-right: 1.5rem !important;
     }
 }
+
+/* Subtle stripe effect */
+tr:nth-child(even) {
+    background: rgba(255,255,255,0.4) !important;
+}
+
+/* Don't collapse rows even if they are empty */
+tbody tr {
+    height: 1.8rem !important;
+}
+
+.page-size-chooser {
+    display: flex !important;
+    align-items: center !important;
+    margin-bottom: 1rem !important;
+}
+
+
+.search-button {
+    background-color: rgb(63, 83, 100);
+}
+
+

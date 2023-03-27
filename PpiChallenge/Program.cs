@@ -16,4 +16,5 @@ builder.Services.AddScoped<IValidator<CandidateModel>, CandidateValidator>();
 builder.Services.AddScoped<AppState>();
 builder.Services.AddSweetAlert2();
 
+
 await builder.Build().RunAsync();

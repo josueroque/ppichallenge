@@ -1,0 +1,54 @@
+﻿@page "/"
+@inject IJSRuntime js
+@inject SweetAlertService Swal
+
+<EditForm Model="@SearchFilters">
+<div class="row justify-content-center">
+
+    <h2 class="mt-4">Search Filters:</h2>
+    <div class="row mt-2 pb-4 border-bottom border-top align-items-end">
+        <div class="col-lg-3 pt-2 ">
+            <label>First Name</label>
+            <InputText type="text" class="form-control" @bind-Value="@SearchFilters.FirstName" />
+        </div>
+        <div class="col-lg-3 pt-2 ">
+            <label>Last Name</label>
+            <InputText type="text" class="form-control" @bind-Value="@SearchFilters.LastName" />
+        </div>
+        <div class="col-lg-3 pt-2 ">
+            <label>Email Address</label>
+            <InputText type="text" class="form-control" @bind-Value="@SearchFilters.EmailAdress" />
+        </div>
+        <div class="col-lg-3 pt-2 ">
+            <label>Phone Number</label>
+            <InputText type="text" class="form-control" @bind-Value="@SearchFilters.PhoneNumber" />
+        </div>
+        <div class="col-lg-3 pt-2 ">
+            <label>Residential Zip Code</label>
+            <InputText type="text" class="form-control" @bind-Value="@SearchFilters.ZipCode" />
+        </div>
+           <div class="col-lg-9 pt-2">
+                <button @onclick="ApplyFilters" class="btn w-25 btn-primary search-button">
+                     Search
+                </button>
+                <button @onclick="ClearSearch" class="btn w-25 btn-primary search-button mx-2">
+                     Clear
+                </button>
+            </div>
+    </div>
+
+        <div class="col-auto mt-4">
+        <div class="grid">
+            <QuickGrid Items="@SearchResults">
+                <PropertyColumn Title="First Name" Property="@(c => c.FirstName)" Sortable="true" />
+                <PropertyColumn Title="Last Name" Property="@(c => c.LastName)" Sortable="true" Align="Align.Right" />
+                <PropertyColumn Title="Email Adress" Property="@(c => c.EmailAdress)" Sortable="true" Align="Align.Right" />
+                <PropertyColumn Title="Phone Number"  Property="@(c => c.PhoneNumber)" Sortable="true" Align="Align.Right" />
+                <PropertyColumn Title="Zip Code" Property="@(c => c.ZipCode)" Sortable="true" Align="Align.Right" />
+            </QuickGrid>
+        </div>
+
+        <Paginator  Value="@pagination" />
+    </div>
+</div>
+</EditForm>
