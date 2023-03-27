@@ -28,25 +28,29 @@
             <label>Residential Zip Code</label>
             <InputText type="text" class="form-control" @bind-Value="@SearchFilters.ZipCode" />
         </div>
-           <div class="col-lg-9 pt-2">
-                <button @onclick="ApplyFilters" class="btn w-25 btn-primary search-button">
-                     Search
-                </button>
-                <button @onclick="ClearSearch" class="btn w-25 btn-primary search-button mx-2">
-                     Clear
-                </button>
-                <button @onclick="NavigateToCreate" class="btn w-25 btn-primary search-button mx-2">
-                    Add New
-                </button>
+            <div class="row">
+                <div class="col-12 mt-4">
+                    <div class="mx-auto w-75 mt-3 mb-3 text-center">
+                        <button @onclick="ApplyFilters" class="btn w-25 btn-primary search-button">
+                             Search
+                        </button>
+                        <button @onclick="ClearSearch" class="btn w-25 btn-primary search-button mx-2">
+                             Clear
+                        </button>
+                        <button @onclick="NavigateToCreate" class="btn w-25 btn-primary search-button mx-2">
+                            Add New
+                        </button>
+                     </div>
+                </div>
             </div>
-    </div>
+        </div>
 
         <div class="col-auto mt-4">
             <div class="mx-auto w-50 mt-3 mb-3 text-center">
                 <h4>Candidates</h4>
             </div>
         <div class="grid">
-            <QuickGrid Items="@SearchResults">
+            <QuickGrid Items="@SearchResults" Pagination="@pagination" Class="table table-striped">
                 <PropertyColumn Title="First Name" Property="@(c => c.FirstName)" Sortable="true" />
                 <PropertyColumn Title="Last Name" Property="@(c => c.LastName)" Sortable="true" Align="Align.Right" />
                 <PropertyColumn Title="Email Adress" Property="@(c => c.EmailAdress)" Sortable="true" Align="Align.Right" />
